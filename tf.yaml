@@ -155,9 +155,7 @@ spec:
         - mountPath: /var/lib/zookeeper
           name: zookeeper-data
         - mountPath: /var/log/zookeeper
-          name: zookeeper-logs
-      imagePullSecrets:
-      - name: 
+          name: zookeeper-logs 
       volumes:
       - name: zookeeper-data
         hostPath:
@@ -289,8 +287,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: analyticsdb-data
         hostPath:
@@ -398,8 +394,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: configdb-data
         hostPath:
@@ -522,8 +516,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: var-run
         hostPath:
@@ -655,8 +647,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: contrail-logs
         hostPath:
@@ -796,8 +786,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: contrail-logs
         hostPath:
@@ -935,8 +923,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: contrail-logs
         hostPath:
@@ -1083,8 +1069,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: contrail-logs
         hostPath:
@@ -1161,8 +1145,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: contrail-logs
         hostPath:
@@ -1271,8 +1253,6 @@ spec:
           name: rabbitmq-data
         - mountPath: /var/log/rabbitmq
           name: rabbitmq-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: rabbitmq-data
         hostPath:
@@ -1342,8 +1322,6 @@ spec:
           name: contrail-logs
         - mountPath: /tmp/serviceaccount
           name: pod-secret
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: contrail-logs
         hostPath:
@@ -1516,8 +1494,6 @@ spec:
         volumeMounts:
         - mountPath: /var/log/contrail
           name: contrail-logs
-      imagePullSecrets:
-      - name: 
       volumes:
       - name: dev
         hostPath:
