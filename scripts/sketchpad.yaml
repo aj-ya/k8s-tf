@@ -1,32 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sketchpad
-  namespace: default
+  name: sketchpad-deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      bb: web
+      app: sketchpad
   template:
     metadata:
       labels:
-        bb: web
+        app: sketchpad
     spec:
       containers:
-      - name: sketchpad-site
+      - name: sketchpad
         image: ajeyaunoff/docker-staticwebpage:latest
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: sketchpad-entrypoint
-  namespace: default
-spec:
-  type: NodePort
-  selector:
-    bb: web
-  ports:
-  - port: 3000
-    targetPort: 3000
-    nodePort: 80
+        ports:
+        - containerPort: 80
